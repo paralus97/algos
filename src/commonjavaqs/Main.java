@@ -2,11 +2,13 @@ package commonjavaqs;
 
 import com.sun.source.tree.Tree;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // java goes left to right
         // 100 will be added to 100 to get 200, 200 casted to string to match res
         System.out.println(100 + 100 + " print");
@@ -97,6 +99,8 @@ public class Main {
         treeMap2.putAll(treeMap);
         System.out.println(treeMap);
         System.out.println(treeMap2);
+
+        System.out.println(InputParserBasic.parseFile(new File("sample_input.txt")));
 
         // O(1): hashmap hash set lookup and put ops
         // O(logn): RBTree(TreeMap) and BinaryHeaps insertion and deletion
