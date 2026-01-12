@@ -2,7 +2,7 @@ package sortingalgos;
 
 import java.util.Arrays;
 
-// BigO (N^2) - 1 where N is the size of array
+// O(N^2) - 1 where N is the size of array
 public class InsertionSort {
 
     // Work from left to right
@@ -24,10 +24,11 @@ public class InsertionSort {
 //                    Util.swap(array, j, j - 1);
 //        return array;
 
-        for (int i = 0; i < array.length; i ++) {
+        for (int i = 0; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
-                if (array[j - 1] > array[j])
-                    Util.swap(array, j, j - 1);
+                if (array[j] < array[j - 1]) {
+                    Util.swap(array, j, j -1);
+                }
             }
         }
         return array;

@@ -1,10 +1,8 @@
 package sortingalgos;
 
-// Worst case BigO(N^2)
+// Worst case O(N^2)
 // Average case BigO(nlogn)
 public class QuickSort {
-    // TODO: Implement me!!
-
     // select pivot and put to end of array
     // itemFromLeft is first item starting from left of pivot that is Larger
     // itemFromRight is first item starting rom right of pivot that is smaller

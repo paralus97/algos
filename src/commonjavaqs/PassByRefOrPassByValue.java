@@ -20,7 +20,7 @@ public class PassByRefOrPassByValue {
     }
 
     // Same here except with arrays, a copy of the array reference is made, not just a primitive. And this copy has the same
-    // value as client code. Therefore output is 100, 2, 3
+    // value as client code. Therefore output is 1000, 2, 3
     static void changeArray(int[] arr) {
         arr[0] = 1000;
     }
