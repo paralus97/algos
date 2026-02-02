@@ -1,6 +1,7 @@
 package commonjavaqs;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -21,13 +22,12 @@ public class InputParserBasic {
         List<Integer> input = new ArrayList<>();
         try {
             inputStream = new FileInputStream(file);
-            sc = new Scanner(inputStream, "UTF-8");
+            sc = new Scanner(inputStream, StandardCharsets.UTF_8);
             while (sc.hasNextLine()) {
                 // String line = sc.nextLine().trim();
                 int i = sc.nextInt();
                 input.add(i);
             }
-            // note that Scanner suppresses exceptions
             if (sc.ioException() != null) {
                 throw sc.ioException();
             }

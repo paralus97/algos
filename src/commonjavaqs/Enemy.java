@@ -12,7 +12,7 @@ package commonjavaqs;
         System.out.println("defend!");
     }
 
-    // Having final here means method cant be overriden in
+    // Having final here means method cant be overriden
     public final void cantOverrideMe() {
 
     }
